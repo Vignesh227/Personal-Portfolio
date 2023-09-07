@@ -1,0 +1,437 @@
+/* Font Links */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    scroll-behavior: smooth;
+}
+:root{
+    /* --primary : #000000;
+    --second : #e66b5b;
+    --third : #e5ebdf;
+    --innerthird : #dae1d1;
+    --font : #5da4a8; */
+
+    --primary : #e5ebdf;
+    --primary : #f4f8f1;
+    --second : #000;
+    --third : #000;
+    --innerthird : #dae1d1;
+    --innerthird : #c7c7c7b9;
+    --font : #000;
+}
+::selection{
+    color: var(--third);
+    background-color: var(--primary) ;
+}
+html{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    
+}
+body{
+    /* Hiding Scrollbar */
+    width: calc(100% + 17px);
+    height: 100%;
+    overflow-y: scroll;
+    padding-right: 17px;
+
+    
+    
+}
+
+/* Section CSS */
+
+.one{
+    background-color: var(--primary);
+    overflow: hidden;
+}
+
+/*  Navbar CSS  */
+nav ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 6rem 6rem 4rem 6rem;
+}
+nav ul li{
+    font-size: 1.4rem;
+    list-style: none;
+    padding-right:5rem;
+    transition: 150ms ease-in-out;
+    transform: scale(0.85);
+
+}
+nav ul li a{
+    font-family: 'Fira Mono', monospace;
+    color:var(--font);
+    text-decoration: none;
+}
+nav ul li a{
+    font-family: 'Fira Mono', monospace;
+    color:var(--font);
+    text-decoration: none;
+    transition: 150ms ease-in-out;
+    /* animation: fadein 1000ms; */
+
+    
+}
+nav ul li a:hover{
+    color: grey;
+}
+
+/* nav ul li:nth-child(1){
+    padding-left: 1rem;
+} */
+
+
+/* Heading Content */
+.heading h1{
+    font-family: 'Staatliches', cursive;
+    letter-spacing: .1rem;
+    font-weight: 100;
+    font-size: 16rem;
+    text-align: center;
+    color: var(--font);
+    user-select: none;
+
+    animation: fadein 1100ms;
+}
+/* Fade in animation */
+@keyframes fadein {
+    0%{
+        opacity: 0;
+        transform: translateY(5rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+}
+
+.heading h1 div{
+    transform: translateY(-8rem);
+    animation: spanfade 1200ms;
+    
+}
+
+.heading h1 span{
+    font-size: 2.5rem;
+    font-family: 'Fira Mono', monospace;
+    font-weight: 400;
+    pointer-events: none;    
+}
+.autotyped{
+    color: rgb(141, 141, 141);
+}
+
+/* Fadein animation */
+@keyframes spanfade {
+    0%{
+        opacity: 0;
+        transform: translateY(-4rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(-8rem);
+    }
+}
+
+
+
+
+
+
+
+
+/* Section Two - About */
+.two{
+    background-color: var(--second);
+    padding: 11rem 8rem 7rem;
+    pointer-events: none;
+    
+}
+.two h2{
+    padding-top:2rem;
+    font-family: 'Staatliches', cursive;
+    color: var(--innerthird);
+    font-weight: 100;
+}
+
+.two .about h2{
+    font-size:4rem;
+}
+.two .about .about-content{
+    display: flex;
+    width: 100%;
+    text-align: justify;
+
+}
+.two .about .about-content p:nth-child(1){
+   width:50%;
+   padding-right: 10rem;
+}
+.two .about .about-content p:nth-child(2){
+    width:50%;
+}
+.two .about .about-content p, .studies-skills .studies  p,
+ .studies-skills .skills p{
+
+    font-family: 'Fira Mono', monospace;
+    font-size: 1.2rem;
+    /* font-weight: 400; */
+    line-height: 3rem;
+    padding:3rem 0rem;
+    color: var(--primary);
+}
+
+.studies-skills .studies  p,
+ .studies-skills .skills p{
+    padding-bottom:0rem;
+ }
+
+/* Skills and Studies CSS */
+.studies-skills{
+    margin-top: 2.5rem;
+    display: flex;
+}
+.studies-skills h2{
+    font-size: 2rem;
+}
+.studies, .skills{
+    width:50%;
+}
+.studies{
+    padding-right: 10rem;
+}
+
+
+
+
+
+
+
+/* Third Section - Projects */
+.three{
+    background-color: var(--second);
+    padding: 6rem 8rem 6rem;
+}
+.three h2, .four h2{
+    font-family: 'Staatliches', cursive;
+    color: var(--innerthird);
+    font-weight: 100;
+    pointer-events: none;
+    font-size:4rem;
+
+}
+
+/* Projects div */
+.three .projects .project div{
+    
+    font-size: 1.5rem;
+    font-family: 'Fira Mono', monospace;
+    color: var(--primary);
+    background-color: #282828;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    transition: 5   00ms ease;
+    overflow: hidden;
+}
+.three .projects .project div:hover > img{
+    filter: grayscale(0.3);
+    /* width: 20.5%; */
+    transform: scale(1.05);
+}
+
+.three .projects .project div:hover > p{
+    transform: translateX(.5rem);
+}
+
+/* Project Name CSS */
+.three .projects .project div p{
+    padding: 2.5rem 2.5rem;
+    width: 80%;
+    transition: 500ms ease;
+    user-select: none;
+}
+    
+/* Project Link CSS*/
+.three .projects .project div p a{
+    color: var(--primary);
+    text-decoration: none;
+    transition: 500ms ease;
+    border-bottom: 1px solid #282828;
+}
+.three .projects .project div p a:hover {
+    text-decoration: none;
+    border-bottom: 1px solid rgb(218, 218, 218);
+    transition: 200ms ease;
+}
+
+/* Project Description CSS*/
+.three .projects .project div p span{
+    font-size: .92rem;
+    font-family: 'Fira Mono', monospace;
+    color: rgb(188, 188, 188);
+    margin-top: 3rem;
+    pointer-events: none;
+}
+.three .projects .project div img{
+    filter: grayscale(.9);
+    pointer-events: none;
+    border-radius: 0% 10px 10px 0%;
+    width: 20%;
+    max-width: 240px;
+    height:10rem;
+
+    transition: 500ms ease;
+}
+
+/* Accessing First Child Element */
+.three .projects .project div:nth-child(1){
+    margin-top:3rem;
+}
+
+/* Accessing Remaining Child Element */
+.three .projects .project div:nth-child(n+2){
+    margin-top:1rem;
+}
+
+
+
+
+
+/* Fourth Section - Courses & Certificates*/
+.four{
+    background-color: var(--second);
+    padding: 7rem 8rem 16rem;
+}
+.four .courses .coursename{
+    width: 100% ;
+    font-size: 1.2rem;
+    font-family: 'Fira Mono', monospace;
+    color: var(--primary);
+}
+.four .courses .coursename a{
+    width: 80%;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--primary);
+    transition: 100ms ease;
+}
+.four .courses .coursename a:hover{
+    color: rgb(205, 202, 202);
+    transform: translateX(.2rem);
+}
+.four .courses .coursename span{
+    font-size: 1.1rem;
+    color: var(--primary);
+    color: rgb(188, 188, 188);
+    pointer-events: none;
+
+    width: 10%;
+    max-width: 10%;
+    user-select: none;
+}
+
+/* Accessing First Child Element */
+.four .courses .coursename a:nth-child(1){
+    margin-top: 4rem;
+}
+
+/* Accessing Remaining Child Elements */
+.four .courses .coursename a:nth-child(n+2){
+    margin-top: 2.5rem;
+}
+
+
+
+
+/* Horizontal Ruler CSS */
+.hr-line{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:0rem 14rem;
+}
+.hr-line hr{
+    width:100%;
+    background-color: black;
+    border: none;
+    border-top:1px solid #989898;
+}
+
+
+
+
+    
+
+/* Section Five - Footer*/
+.five{
+    background-color: var(--second);
+    color: var(--innerthird);
+    font-family: 'Fira Mono', monospace;
+    padding: 5rem 8rem 5rem;
+}
+
+/*  Social Links CSS*/
+.five .social-links .links{
+    text-decoration: none;
+}
+.five .social-links .links img{ 
+    background-color:var(--innerthird);
+    border-radius: 10%;
+    width:30px;
+    height:30px;
+    margin:0rem .3rem;
+    padding:.3rem .3rem;
+    transition: 100ms ease-in;
+    border-radius: 50%;
+}
+.five .social-links a img:hover{
+        background-color:rgb(185, 185, 185);
+}
+/* Linkedin image */
+.five .social-links a:nth-child(1):hover > img{
+    background-color:#0072b1;
+}
+
+/* Github image*/
+.five .social-links a:nth-child(2):hover > img{
+    background-color:#6e5494;
+}
+
+/* Profile image CSS */
+.five .prof{
+    text-decoration: none;
+    text-align: center;
+    color: rgb(193, 193, 193);
+}
+.five .prof p{
+    margin-top:2rem;
+
+}
+.five .prof:hover{
+    text-decoration: none;
+    color: #989898;
+}
+
+
+
+/*
+
+    MEDIA QUERY FOR MOBILE DEVICES
+
+*/
+
+@media only screen and (max-width: 1000px) {
+    
+}
