@@ -41,9 +41,6 @@ body{
     height: 100%;
     overflow-y: scroll;
     padding-right: 17px;
-
-    
-    
 }
 
 /* Section CSS */
@@ -79,8 +76,6 @@ nav ul li a{
     text-decoration: none;
     transition: 150ms ease-in-out;
     /* animation: fadein 1000ms; */
-
-    
 }
 nav ul li a:hover{
     color: grey;
@@ -171,7 +166,6 @@ nav ul li a:hover{
     display: flex;
     width: 100%;
     text-align: justify;
-
 }
 .two .about .about-content p:nth-child(1){
    width:50%;
@@ -426,12 +420,216 @@ nav ul li a:hover{
 
 
 
-/*
-
-    MEDIA QUERY FOR MOBILE DEVICES
+/* 
+    ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+    ~                                       ~
+    ~    MEDIA QUERY FOR MOBILE DEVICES     ~
+    ~                                       ~
+    ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 
 */
 
 @media only screen and (max-width: 1000px) {
-    
+    body{
+        background-color: transparent;
+        /* Hiding Scrollbar */
+        width: 100%;
+        padding:0px;
+    }
+
+
+    /*  Navbar CSS  */
+    nav ul{
+        /* justify-content: center;
+        align-items: center; */
+        padding: 2rem 0rem 2rem 2rem;
+    }
+    nav ul li{
+        font-size: 1.1rem;
+        padding-right:2rem;
+    }
+
+
+    /* Heading Content */
+    .heading h1{
+        font-size: 5.5rem;
+        padding: 0rem 2rem;
+        padding-top: 10rem;
+    }
+
+    .heading h1 div{
+        transform: translateY(-3rem);
+        animation: spanfade 1200ms;
+        margin-bottom: 14.5rem;
+    }
+
+    .heading h1 span{
+        font-size:1.1rem;  
+    }
+
+    /* Fadein animation */
+    @keyframes spanfade {
+        0%{
+            opacity: 0;
+            transform: translateY(4rem);
+        }
+        100%{
+            opacity: 1;
+            transform: translateY(-3rem);
+        }
+    }
+
+    /* Section Two */
+    .two {
+        padding: 3rem 2rem 1rem;
+    }
+    .two h2{
+        padding-top:1rem;
+    }
+    .two .about .about-content{
+
+        /* Change the direction of about(content) on mobile*/
+        flex-direction: column;
+        width: 100%;
+    }
+    .two .about h2{
+        font-size:3rem;
+    }
+    .two .about .about-content p:nth-child(1){
+        width:100%;
+        padding-right: 0rem;
+    }
+    .two .about .about-content p:nth-child(2){
+        width:100%;
+        padding-top: 0rem !important;
+    }
+    .two .about .about-content p, .studies-skills .studies  p,
+    .studies-skills .skills p, .studies-skills .studies p span{
+        font-size: .8rem !important;
+        line-height: 2rem;
+        padding:2rem 0rem;
+    }
+
+    /* Skills and Studies CSS */
+    .studies-skills{
+        margin-top: 0rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .studies-skills h2{
+
+        padding-top: 2rem;
+        font-size: 2rem;
+    }
+    .studies-skills .studies p, .studies-skills .skills p{
+        padding:1rem 0rem 2rem;
+    }
+    .studies, .skills{
+        width: 100%;
+    }
+    .studies{
+        padding-right: 0rem;
+    }
+
+
+
+
+
+    /* Third Section - Projects */
+    .three{
+        padding: 2rem 2rem 3rem;
+    }
+    .three h2{
+        font-size:3rem;
+    }
+
+    /* Projects div */
+    .three .projects .project div{
+        font-size: .95rem;
+        border-radius: 7px;
+    }
+
+    /* Project Name CSS */
+    .three .projects .project div p{
+        padding: 1.3rem 1.3rem;
+        width: 100%;    
+    }
+
+    /* Project Description CSS*/
+    .three .projects .project div p span{
+        font-size: .74rem;
+    }
+    .three .projects .project div img{
+        display: none;
+    }
+
+    /* Accessing First Child Element */
+    .three .projects .project div:nth-child(1){
+        margin-top:1.5rem;
+    }
+
+    /* Accessing Remaining Child Element */
+    .three .projects .project div:nth-child(n+2){
+        margin-top:1rem;
+    }
+
+
+    /* Fourth Section - Courses & Certificates*/
+    .four{
+        padding: 2.5rem 2rem 3rem;
+    }
+    .four h2{
+        font-size: 2rem;
+    }
+    .four .courses .coursename{
+        font-size: .95rem;
+    }
+    .four .courses .coursename a{
+        width: 100%;
+        display: block;
+        line-height: 1.5rem;
+    }
+    .four .courses .coursename span{
+        font-size: .74rem;
+
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Accessing First Child Element */
+    .four .courses .coursename a:nth-child(1){
+        margin-top: 2.5rem;
+    }
+
+    /* Accessing Remaining Child Elements */
+    .four .courses .coursename a:nth-child(n+2){
+        margin-top: 2rem;
+    }
+
+    /* Horizontal Ruler CSS */
+    .hr-line{
+        padding:3rem 4rem 0rem;
+        background-color: black;
+    }
+
+
+
+    /* Section Five - Footer*/
+    .five{
+        padding: 2.5rem 2rem 2.5rem;
+    }
+
+    .five .social-links .links img{    
+        width:25px;
+        height:25px;
+        padding:.2rem .2rem;
+        margin:0rem .2rem;
+
+    }
+
+    /* Profile image CSS */
+    .five .prof p{
+        margin-top:1rem;
+        font-size: 0.75rem;
+    }
 }
