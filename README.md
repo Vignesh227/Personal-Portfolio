@@ -4,4 +4,3 @@
 
 🚀 Explore my work, get to know me better, and feel free to connect.
 
-Visit my <a href="vignesh227.github.io/Personal-Portfolio" target="_blank_"> Portfolio </a> page
